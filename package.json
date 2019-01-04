@@ -1,8 +1,8 @@
 {
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start:build": "node build.js",
-        "start:server": "nodemon build/server.js"
+        "build": "node build.js",
+        "start": "node start.js"
     },
     "dependencies": {
         "@babel/cli": "^7.0.0",

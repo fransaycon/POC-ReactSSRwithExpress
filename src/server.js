@@ -32,7 +32,7 @@ let renderMarkup = html => {
         <body>
             <div id="app">${html}</div>
             <div><h1>HELLO!</h1></div>
-            <script src="/js/home.js"></script>
+            <script src="/js/bundle.js"></script>
         </body>
     </html>
  `;

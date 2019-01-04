@@ -3,8 +3,6 @@ const rimraf = require('rimraf');
 const webpackConfig = require('./config/webpack.config.js');
 const PATHS = require("./config/paths");
 const chalk = require("chalk");
-const webpackDevMiddleware = require('webpack-dev-middleware');
-const webpackHotMiddleware = require('webpack-hot-middleware');
 
 const logMessage = (message, level = 'info') => {
     const color = level === 'error' ? 'red' : level === 'warning' ? 'yellow' : 'white';
@@ -52,12 +50,15 @@ const build = async () => {
         }
     });
 
+    // wait until client and server is compiled
     try {
         await serverPromise;
         await clientPromise;
         logMessage('Done building!', 'info');
+        process.exit(0);
     } catch (error) {
         logMessage(error, 'error');
+        process.exit(1);
     }
 };
 

@@ -32,5 +32,8 @@ module.exports = {
     fs: 'empty'
   },
   target: 'node',
+  node: {
+    __dirname: false,
+  },
   externals: ['express'],
 };

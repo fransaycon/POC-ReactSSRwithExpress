@@ -7,7 +7,7 @@ export default class App extends Component {
   }
 
   handleIncrement = () => {
-    this.setState({number: this.state.number + 1});
+    this.setState({number: this.state.number + 2});
   }
 
   render() {

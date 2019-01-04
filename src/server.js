@@ -31,7 +31,8 @@ let renderMarkup = html => {
         </head>
         <body>
             <div id="app">${html}</div>
-            <script src="/js/index.js"></script>
+            <div><h1>HELLO!</h1></div>
+            <script src="/js/home.js"></script>
         </body>
     </html>
  `;

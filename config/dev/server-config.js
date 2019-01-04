@@ -1,15 +1,12 @@
-const path = require("path");
+const PATHS = require("../paths");
+const devServerConfig = require("./dev-config");
 const webpack = require("webpack");
-
-const PATHS = {
-  build: path.join(__dirname, "build"),
-  server: path.join(__dirname, "src", "server.js"),
-};
+const { serverEntries } = require("../entries");
+const WriteFileWebpackPlugin = require('write-file-webpack-plugin');
 
 module.exports = {
-  entry: {
-    server: PATHS.server,
-  },
+  name: 'server',
+  entry: serverEntries,
   module: {
     rules: [
       {
@@ -22,7 +19,7 @@ module.exports = {
     ],
   },
   output: {
-    path: PATHS.build,
+    path: PATHS.serverBuild,
     filename: "[name].js",
     libraryTarget: "umd",
     globalObject: "this",
@@ -36,4 +33,12 @@ module.exports = {
     __dirname: false,
   },
   externals: ['express'],
+  plugins: [
+      new WriteFileWebpackPlugin(),
+      new webpack.HotModuleReplacementPlugin(),
+  ],
+  mode: 'development',
+  performance: {
+      hints: false,
+  },
 };

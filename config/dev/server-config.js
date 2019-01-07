@@ -1,22 +1,14 @@
-const PATHS = require("../paths");
+const devPlugins = require("./dev-plugins");
+const devRules = require("./dev-rules");
 const devServerConfig = require("./dev-config");
-const webpack = require("webpack");
+const PATHS = require("../paths");
 const { serverEntries } = require("../entries");
-const WriteFileWebpackPlugin = require('write-file-webpack-plugin');
 
 module.exports = {
   name: 'server',
   entry: serverEntries,
   module: {
-    rules: [
-      {
-        test: /.js?$/,
-        exclude: /node_modules/,
-        use: [{
-            loader: 'babel-loader',
-        }],
-      }
-    ],
+    rules: devRules,
   },
   output: {
     path: PATHS.serverBuild,
@@ -33,10 +25,7 @@ module.exports = {
     __dirname: false,
   },
   externals: ['express'],
-  plugins: [
-      new WriteFileWebpackPlugin(),
-      new webpack.HotModuleReplacementPlugin(),
-  ],
+  plugins: devPlugins,
   mode: 'development',
   performance: {
       hints: false,

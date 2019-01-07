@@ -1,20 +1,26 @@
 import React, { Component } from 'react';
+import styles from "../../style/home/main.scss";
 
 export default class App extends Component {
 
-  state = {
-    number: 1,
-  }
-
-  handleIncrement = () => {
-    this.setState({number: this.state.number + 2});
-  }
-
   render() {
     return (
-      <div>
-        <h1>Number {this.state.number}</h1>
-        <button onClick={() => this.handleIncrement()}>Increment!</button>
+      <div className={styles.Container}>
+        <div>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+        </div>
       </div>
     );
   }

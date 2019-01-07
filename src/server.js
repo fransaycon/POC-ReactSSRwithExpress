@@ -8,7 +8,7 @@ import fs from "fs";
 let server = port => {
   const app = express();
 
-  app.use('/js', express.static(path.join(__dirname, '/static')));
+  app.use("/static", express.static(path.join(__dirname, '/static')));
 
   app.get("/", (req, res) => {
     res.status(200).send(renderMarkup(renderToString(<App />)));
@@ -28,11 +28,12 @@ let renderMarkup = html => {
         <head>
             <title>Webpack SSR Demo</title>
             <meta charset="utf-8" />
+            <link rel="stylesheet" type="text/css" href="/static/styles/bundle.css">
         </head>
         <body>
             <div id="app">${html}</div>
             <div><h1>HELLO!</h1></div>
-            <script src="/js/bundle.js"></script>
+            <script src="/static/bundle.js"></script>
         </body>
     </html>
  `;

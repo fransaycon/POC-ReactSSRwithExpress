@@ -1,23 +1,15 @@
-const PATHS = require("../paths");
+const devPlugins = require("./dev-plugins");
+const devRules = require("./dev-rules");
 const devServerConfig = require("./dev-config");
-const webpack = require("webpack");
-const { clientEntries } = require('../entries');
-const WriteFileWebpackPlugin = require('write-file-webpack-plugin');
 const generateSourceMap = process.env.OMIT_SOURCEMAP === 'true' ? false : true;
+const PATHS = require("../paths");
+const { clientEntries } = require('../entries');
 
 module.exports = {
   name: 'client',
   entry: clientEntries,
   module: {
-    rules: [
-      {
-        test: /.js?$/,
-        exclude: /node_modules/,
-        use: [{
-            loader: 'babel-loader',
-        }],
-      }
-    ],
+    rules: devRules,
   },
   output: {
     path: PATHS.clientBuild,
@@ -26,12 +18,10 @@ module.exports = {
     globalObject: "this",
   },
   node: {
-    fs: 'empty'
+    fs: 'empty',
+    window: 'empty',
   },
-  plugins: [
-      new WriteFileWebpackPlugin(),
-      new webpack.HotModuleReplacementPlugin(),
-  ],
+  plugins: devPlugins,
   mode: 'development',
   devtool: generateSourceMap ? 'cheap-module-inline-source-map' : false,
   performance: {

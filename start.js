@@ -108,7 +108,6 @@ const start = async () => {
         }
     });
 
-    // wait until client and server is compiled
     try {
         await serverPromise;
         await clientPromise;

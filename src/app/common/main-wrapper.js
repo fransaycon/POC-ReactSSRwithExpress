@@ -1,26 +1,33 @@
 import React, { Component } from 'react';
 import { Helmet } from "react-helmet";
-import styled from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 import { colors } from "../constants";
-import { ContentWrapper } from "./content-wrapper";
+import Kano from "../fonts/Kano.otf";
+
+const KanoFont = createGlobalStyle`
+    @font-face{
+        font-family: Kano;
+        src: url(${Kano});
+    }
+`;
 
 const MainContainer = styled.div`
   display: flex;
   width: 100%;
-  background-color: ${colors.grey};
-  alignContent: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Kano';
 `
 
 export default class MainWrapper extends Component {
   render() {
     return (
       <MainContainer>
+        <KanoFont />
         <Helmet>
           <title>Franrey Saycon - Portfolio</title>
         </Helmet>
-        <ContentWrapper>
         {this.props.children}
-        </ContentWrapper>
       </MainContainer>
     );
   }

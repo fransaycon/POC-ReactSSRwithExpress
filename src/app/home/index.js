@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from 'react-dom';
+import { hydrate } from 'react-dom';
 import styled from "styled-components";
 
 
@@ -26,6 +26,8 @@ const App = () => {
     );
 }
 
-render(<App />, document.getElementById("app"));
+if(typeof document !== "undefined"){
+    hydrate(<App />, document.getElementById("app"));
+}
 
 export default App;

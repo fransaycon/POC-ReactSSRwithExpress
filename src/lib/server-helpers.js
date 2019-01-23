@@ -1,16 +1,12 @@
-export let formatHTML = (appStr, helmet, js, styleTags) => {
+export let formatHTML = js => {
   return `
     <!DOCTYPE html>
     <html lang="en">
       <head>
-        ${helmet.title.toString()}
-        ${helmet.meta.toString()}
-        ${styleTags}
+        <title>Hello world!</title>
       </head>
       <body style="margin: 0px;"">
-        <div id="app">
-          ${ appStr }
-        </div>
+        <div id="app" />
         <script src=${js}></script>
       </body>
     </html>

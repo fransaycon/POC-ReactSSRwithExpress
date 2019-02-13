@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import MainWrapper from "../../common/main-wrapper";
-import { BlueWrapper, WhiteWrapper } from "../../common/sub-wrapper";
-import styled from "styled-components";
-import {colors} from "../../constants";
+import React, { Component } from 'react';
+import MainWrapper from '../../common/main-wrapper';
+import { BlueWrapper, WhiteWrapper } from '../../common/sub-wrapper';
+import styled from 'styled-components';
+import {colors} from '../../constants';
 
 
 const HeaderName = styled.h1`

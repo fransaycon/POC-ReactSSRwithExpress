@@ -1,8 +1,8 @@
-const devPlugins = require("./dev-plugins");
-const devRules = require("./dev-rules");
-const devServerConfig = require("./dev-config");
-const PATHS = require("../paths");
-const { serverEntries } = require("../entries");
+const devPlugins = require('./dev-plugins');
+const devRules = require('./dev-rules');
+const devServerConfig = require('./dev-config');
+const PATHS = require('../paths');
+const { serverEntries } = require('../entries');
 
 module.exports = {
   name: 'server',
@@ -12,9 +12,9 @@ module.exports = {
   },
   output: {
     path: PATHS.serverBuild,
-    filename: "[name].js",
-    libraryTarget: "umd",
-    globalObject: "this",
+    filename: '[name].js',
+    libraryTarget: 'umd',
+    globalObject: 'this',
   },
   node: {
     net: 'empty',

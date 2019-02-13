@@ -1,4 +1,4 @@
-const path = require("path");
+const path = require('path');
 
 module.exports = {
     publicPath: 'http://localhost:8080/static',

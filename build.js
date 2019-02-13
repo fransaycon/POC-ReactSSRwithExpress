@@ -1,8 +1,8 @@
 const webpack = require('webpack');
 const rimraf = require('rimraf');
 const webpackConfig = require('./config/webpack.config.js');
-const PATHS = require("./config/paths");
-const chalk = require("chalk");
+const PATHS = require('./config/paths');
+const chalk = require('chalk');
 
 const logMessage = (message, level = 'info') => {
     const color = level === 'error' ? 'red' : level === 'warning' ? 'yellow' : 'white';

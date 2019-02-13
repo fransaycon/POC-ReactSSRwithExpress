@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Helmet } from "react-helmet";
-import styled, { createGlobalStyle } from "styled-components";
-import { colors } from "../constants";
-import Kano from "../fonts/Kano.otf";
+import { Helmet } from 'react-helmet';
+import styled, { createGlobalStyle } from 'styled-components';
+import { colors } from '../constants';
+import Kano from '../fonts/Kano.otf';
 
 const KanoFont = createGlobalStyle`
     @font-face{

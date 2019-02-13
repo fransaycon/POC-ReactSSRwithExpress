@@ -1,4 +1,4 @@
-const PATHS = require("./paths");
+const PATHS = require('./paths');
 
 const clientEntries = {
     bundle: [`${PATHS.app}/home/index.js`],

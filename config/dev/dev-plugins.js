@@ -1,5 +1,5 @@
 const WriteFileWebpackPlugin = require('write-file-webpack-plugin');
-const webpack = require("webpack");
+const webpack = require('webpack');
 
 module.exports = [
   new WriteFileWebpackPlugin(),

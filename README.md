@@ -1,4 +1,4 @@
-# Franrey's Portofolio Using React and Styled Components
+# Franrey's Portfolio Using React and Styled Components
 
 ## Introduction
 

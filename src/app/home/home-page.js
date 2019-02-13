@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import MainWrapper from '../../common/main-wrapper';
-import { BlueWrapper, WhiteWrapper } from '../../common/sub-wrapper';
+import MainContainer from '../common/main-container';
+import { BlueWrapper, WhiteWrapper } from '../common/sub-wrapper';
 import styled from 'styled-components';
-import {colors} from '../../constants';
+import {colors} from '../constants';
 
 
 const HeaderName = styled.h1`
@@ -10,6 +10,7 @@ const HeaderName = styled.h1`
     color: ${colors.white};
     margin: 0;
     font-weight: 700;
+    font-family: "Aileron-Bold";
 `
 
 const SubName = styled.h4`
@@ -19,10 +20,10 @@ const SubName = styled.h4`
     font-weight: 300;
 `
 
-export default class App extends Component {
+export default class HomePage extends Component {
     render(){
         return (
-            <MainWrapper>
+            <MainContainer>
                 <BlueWrapper>
                     <HeaderName><b>FRANREY SAYCON</b></HeaderName>
                     <SubName>SOFTWARE ENGINEER · TEAM LEAD · UX ENTHUSIAST</SubName>
@@ -33,8 +34,7 @@ export default class App extends Component {
                 <BlueWrapper>
                     <h1>Hello World!</h1>
                 </BlueWrapper>
-            </MainWrapper>
+            </MainContainer>
         );
     }
 }
-

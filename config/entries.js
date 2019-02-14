@@ -1,7 +1,7 @@
 const PATHS = require('./paths');
 
 const clientEntries = {
-    bundle: [`${PATHS.app}/home/client.js`],
+    bundle: [`${PATHS.app}/client.js`],
 };
 
 const serverEntries = {

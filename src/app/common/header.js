@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { colors, zIndex } from '../constants';
+import { Link } from 'react-router-dom';
 
 const Container = styled.div`
     display: flex;
@@ -13,18 +14,23 @@ const Container = styled.div`
     padding-right: 20vw;
 `
 
-const PageLink = styled.a`
+const PageLink = styled(Link)`
     font-size: 1.25em;
     color: ${colors.white};
     margin-left: 30px;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
 `
 
 const Header = props => {
     return <Container>
-        <PageLink>Home</PageLink>
-        <PageLink>About</PageLink>
-        <PageLink>Projects</PageLink>
-        <PageLink>Blog</PageLink>
+        <PageLink to='/'>Home</PageLink>
+        <PageLink to='/about'>About</PageLink>
+        <PageLink to='/projects'>Projects</PageLink>
+        <PageLink to='/blog'>Blog</PageLink>
     </Container>
 }
 

@@ -1,32 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
 import MainContainer from '../common/main-container';
-import { BlueWrapper, WhiteWrapper } from '../common/sub-wrapper';
 import styled from 'styled-components';
+import { H1, H4 } from '../common/styled-text';
+import { BlueWrapper, WhiteWrapper } from '../common/styled-wrapper';
 import {colors} from '../constants';
 
 
-const HeaderName = styled.h1`
-    font-size: 4.5em;
-    color: ${colors.white};
-    margin: 0;
-    font-weight: 700;
-    font-family: "Aileron-Bold";
-`
 
-const SubName = styled.h4`
-    font-size: 1.25em;
-    color: ${colors.white};
-    margin: 0;
-    font-weight: 300;
-`
-
-export default class HomePage extends Component {
+export default class HomePage extends React.Component {
     render(){
         return (
             <MainContainer>
                 <BlueWrapper>
-                    <HeaderName><b>FRANREY SAYCON</b></HeaderName>
-                    <SubName>SOFTWARE ENGINEER · TEAM LEAD · UX ENTHUSIAST</SubName>
+                    <H1><b>FRANREY SAYCON</b></H1>
+                    <H4>SOFTWARE ENGINEER · TEAM LEAD · UX ENTHUSIAST</H4>
                 </BlueWrapper>
                 <WhiteWrapper>
                     <h1>Hello World!</h1>

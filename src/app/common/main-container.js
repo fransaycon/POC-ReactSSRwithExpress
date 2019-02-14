@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import { Helmet } from 'react-helmet';
-import styled, { createGlobalStyle } from 'styled-components';
-import { colors } from '../constants';
-import Kano from '../fonts/Kano.otf';
 import AileronBold from '../fonts/Aileron-Bold.otf';
 import Header from './header';
+import Kano from '../fonts/Kano.otf';
+import React, { Component } from 'react';
+import styled, { createGlobalStyle } from 'styled-components';
+import { colors } from '../constants';
+import { Helmet } from 'react-helmet';
 
 const KanoFont = createGlobalStyle`
     @font-face{

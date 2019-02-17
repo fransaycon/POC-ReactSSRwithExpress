@@ -1,14 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
+import { breakpoints } from '../constants';
 
-export const AMAGalleryImage = styled.img`
-    width: 150px;
-    height: 150px;
-    margin: 15px;
-`
+export const HeaderImage = styled.img`
+	width: 175px;
 
-export const SocialMediaImage = styled.img`
-    width: 50px;
-    height: 50px;
-    margin: 10px;
+	@media (min-width: ${breakpoints.tablet}){
+	    width: 250px;
+	}
 `

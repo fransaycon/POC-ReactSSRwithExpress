@@ -26,11 +26,21 @@ export const H2 = styled.h1`
 export const H4 = styled.h4`
     font-size: 1.25em;
     color: ${colors.white};
-    margin: 0;
+    margin: 0 auto;
     font-weight: 300;
 
     @media (min-width: ${breakpoints.desktop}){
         font-size: 2em;
+        white-space: nowrap;
+        ${props => props.animated && `
+            overflow: hidden;
+            animation: typing 2s steps(40, end);
+        `}
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
     }
 `
 

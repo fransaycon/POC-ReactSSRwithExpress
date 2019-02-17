@@ -1,10 +1,23 @@
 import React from 'react';
-import { colors } from '../constants';
+import { colors, breakpoints } from '../constants';
 import styled from 'styled-components';
 
 export const H1 = styled.h1`
-    font-size: 4.5em;
-    color: ${colors.white};
+    font-size: 4em;
+    color: ${props => props.color};
+    font-weight: 700;
+    line-height: 0.85;
+    font-family: "Aileron-Bold";
+    margin: 5px;
+
+    @media (min-width: ${breakpoints.desktop}){
+        font-size: 5em;
+    }
+`
+
+export const H2 = styled.h1`
+    font-size: 1.25em;
+    color: ${props => props.color};
     margin: 0;
     font-weight: 700;
     font-family: "Aileron-Bold";
@@ -15,4 +28,13 @@ export const H4 = styled.h4`
     color: ${colors.white};
     margin: 0;
     font-weight: 300;
+
+    @media (min-width: ${breakpoints.desktop}){
+        font-size: 2em;
+    }
+`
+
+export const P = styled.p`
+    margin: 0;
+    align: justify;
 `

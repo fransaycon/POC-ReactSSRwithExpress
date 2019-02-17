@@ -20,10 +20,11 @@ const KanoFont = createGlobalStyle`
 
 const Container = styled.div`
   display: flex;
-  width: 100%;
   align-items: center;
   flex-direction: column;
   font-family: 'Kano';
+  flex-wrap: wrap;
+  width: 100vw;
 `
 
 export default class MainContainer extends Component {
@@ -33,8 +34,8 @@ export default class MainContainer extends Component {
                 <KanoFont />
                 <Helmet>
                     <title>Franrey Saycon - Portfolio</title>
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 </Helmet>
-                <Header />
                 {this.props.children}
             </Container>
         );

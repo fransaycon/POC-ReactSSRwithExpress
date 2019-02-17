@@ -1,21 +1,26 @@
 import React from 'react';
 import styled from 'styled-components';
-import { colors, zIndex } from '../constants';
+import { colors, zIndex, breakpoints } from '../constants';
 import { Link } from 'react-router-dom';
 
 const Container = styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-self: flex-end;
+    margin-top: 35px;
+    padding-right: 10vw;
     position: absolute;
     top: 0;
-    width: 100%;
-    margin-top: 35px;
-    padding-right: 20vw;
+
+    @media (min-width: ${breakpoints.phone}){
+        align-self: center;
+        padding-right: 0;
+    }
 `
 
 const PageLink = styled(Link)`
-    font-size: 1.25em;
+    font-size: 25px;
     color: ${colors.white};
     margin-left: 30px;
     text-decoration: none;

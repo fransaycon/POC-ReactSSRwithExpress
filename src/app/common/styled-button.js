@@ -20,3 +20,11 @@ export const HeaderButton = styled.a`
 	    to   { opacity: 1; }
 	}
 `
+
+export const MainButton = styled.a`
+    padding: 10px;
+    text-align: center;
+    background-color: ${colors.mainOrange};
+    color: ${colors.white};
+    border-radius: 20px;
+`

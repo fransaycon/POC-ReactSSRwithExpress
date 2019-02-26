@@ -68,13 +68,13 @@ export default class HomePage extends React.Component {
                             <AboutContainer>
                                 <H2 color={colors.purple} contentHeader={true}>I'M AN ENGINEER</H2>
                                 <P>
-                                Born a problem-solver. Took up BS Computer Science course as his main sword.
+                                Born a problem-solver. I took up BS Computer Science course to be my main sword.
                                 I have an advocacy to create a quality service one day that improves our way of life as well as manage it.
-                                Always data-driven and output-oriented, I’m an experience web and native js mobile developer.
+                                Always data-driven and output-oriented, I’m an experience web, api and native js mobile developer.
                                     <br/><br/>
                                 I built websites from the ground up from the back up to the front.
                                 In a team environment, I also made sure our dev environments were easy to reproduce and builds were fast for production use.
-                                I love solving problems of which I'm thankful there's alot online.
+                                I love tackling challenges whether it be real life or online coding problems.
                                 I keep myself updated in tech through blogs and media sites.
                                 </P>
                             </AboutContainer>
@@ -86,6 +86,32 @@ export default class HomePage extends React.Component {
                         </DoubleContentContainer>
                     </ContentWrapper>
                 </BoxContainer>
+                <BoxContainer color={colors.white}>
+                    <ContentWrapper>
+                        <DoubleContentContainer>
+                            <AboutContainer>
+                            </AboutContainer>
+                            <AboutContainer>
+                                <H2 color={colors.purple} contentHeader={true}>I'M A LEADER</H2>
+                                <P>
+                                    "The first and greatest victory is to conquer yourself". - Plato
+                                    This is my philosophy in improving myself and my mindset that I want to impart to others.
+                                    <br/>
+                                    <br/>
+                                    I believe the aim of leadership is to bring out the best in people.
+                                    It's never been just about taking charge but also having that valuable empathy to serve.
+                                    I was an org leader back in college and HS. I have experience in organizing events and team building activities.
+                                    <br/>
+                                    <br/>
+                                    In the tech environemnt, I'm exposed to AGILE processes. Whether it may be Kanban or SCRUM etc.
+                                    I have adapted to apply these processes to improve our team's development cycle.
+                                    I trained people as well as speak in different meetups.
+                                </P>
+                            </AboutContainer>
+                        </DoubleContentContainer>
+                    </ContentWrapper>
+                </BoxContainer>
+
             </MainContainer>
         );
     }

@@ -27,4 +27,5 @@ export const MainButton = styled.a`
     background-color: ${colors.mainOrange};
     color: ${colors.white};
     border-radius: 20px;
+    width: 300px;
 `

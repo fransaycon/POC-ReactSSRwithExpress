@@ -54,6 +54,7 @@ export const DoubleContentContainer = styled.div`
 export const AboutContainer = styled.div`
     display: flex;
     justify-content: space-around;
+    align-items: center;
     flex-direction: column;
     height: 50%;
     flex: 1;

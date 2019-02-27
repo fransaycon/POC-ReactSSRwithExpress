@@ -28,41 +28,51 @@ import SkillList from './skill-list';
 import {
     MainButton
 } from '../common/styled-button';
+import FadeContainer from '../common/content-hider';
 
 export default class HomePage extends React.Component {
 
     state = {
         doneTyping: false,
+        scrollHeight: 0,
+    }
+
+    componentDidMount(){
+        window.onscroll =()=>{
+            this.setState({scrollHeight: window.scrollY});
+        }
     }
 
     render(){
         return (
             <MainContainer>
-                <BoxContainer color={colors.mainBlue}>
-                    <ContentWrapper>
-                        <ContentContainer>
-                            <HeaderImage src={portfolioImg} />
-                            <H1 color={colors.white}>FRANREY SAYCON</H1>
-                            <PlaceHolderContainer>
-                                <Typing
-                                    speed={5}
-                                    hideCursor={true}
-                                    onFinishedTyping={() => this.setState({doneTyping: true})}
-                                >
-                                    <H4 color={colors.white}>SOFTWARE ENGINEER · TEAM LEAD · UX ENTHUSIAST</H4>
-                                </Typing>
-                            </PlaceHolderContainer>
-                            <PlaceHolderContainer topMargin={50}>
-                                {this.state.doneTyping &&
+                <FadeContainer>
+                    <BoxContainer color={colors.mainBlue} animate={true}>
+                        <ContentWrapper>
+                            <ContentContainer>
+                                <HeaderImage src={portfolioImg} />
+                                <H1 color={colors.white}>FRANREY SAYCON</H1>
+                                <PlaceHolderContainer>
+                                    <Typing
+                                        speed={5}
+                                        hideCursor={true}
+                                        onFinishedTyping={() => this.setState({doneTyping: true})}
+                                    >
+                                        <H4 color={colors.white}>SOFTWARE ENGINEER · TEAM LEAD · UX ENTHUSIAST</H4>
+                                    </Typing>
+                                </PlaceHolderContainer>
+                                <PlaceHolderContainer topMargin={50}>
+                                    {this.state.doneTyping &&
                                     <HeaderButton>
                                         franreysaycon@gmail.com
                                     </HeaderButton>
-                                }
-                            </PlaceHolderContainer>
-                        </ContentContainer>
-                    </ContentWrapper>
-                </BoxContainer>
-                <BoxContainer color={colors.white}>
+                                    }
+                                </PlaceHolderContainer>
+                            </ContentContainer>
+                        </ContentWrapper>
+                    </BoxContainer>
+                </FadeContainer>
+                <BoxContainer color={colors.white} scrollHeight={this.state.scrollHeight} pixelTrigger={250}>
                     <ContentWrapper>
                         <DoubleContentContainer>
                             <AboutContainer>
@@ -86,7 +96,7 @@ export default class HomePage extends React.Component {
                         </DoubleContentContainer>
                     </ContentWrapper>
                 </BoxContainer>
-                <BoxContainer color={colors.white}>
+                <BoxContainer color={colors.white} scrollHeight={this.state.scrollHeight} pixelTrigger={500}>
                     <ContentWrapper>
                         <DoubleContentContainer>
                             <AboutContainer>

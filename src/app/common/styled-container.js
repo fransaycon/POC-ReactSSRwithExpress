@@ -7,9 +7,20 @@ export const BoxContainer = styled.div`
     background-color: ${props => props.color};
     width: inherit;
     min-height: 95vh;
+    animation: fadeIn 2s;
 
     @media(min-width: ${breakpoints.desktopLarge}){
         min-height: 800px;
+    }
+
+    @keyframes fadeIn{
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+
     }
 `
 
